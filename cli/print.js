@@ -13,7 +13,7 @@ const title = (message) => {
 };
 
 const block = (title, message) => {
-  const topLineCornersSize = 10;
+  const topLineCornersSize = 12;
   const lineLength = title.length + 2 + topLineCornersSize * 2;
   const breakRegex = new RegExp(`(.{${lineLength}})`, "g");
   const generateLine = (length) => `-`.repeat(length);
