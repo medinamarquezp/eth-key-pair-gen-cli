@@ -1,1 +1,1 @@
-# ETH key pairs gen CLI
+# ETH key pair gen CLI

@@ -2,14 +2,14 @@ const { keyLowerSuggestions } = require("../data/input-suggestions");
 const { isNaHex } = require("../services/keygen.service");
 
 // Actions
-const random = "Create random key pairs";
-const vanity = "Create a vanity key pairs";
+const random = "Create random key pair";
+const vanity = "Create a vanity key pair";
 const validate = "Validate address";
 const actionChoices = [random, vanity, validate];
 
 // Vanity operations
 const createOwnHex = "Create my own hex string";
-const suggestHexKeys = "Suggest my some hex string";
+const suggestHexKeys = "Suggest me some hex strings";
 const vanityOpsChoices = [createOwnHex, suggestHexKeys];
 
 const survey = [
@@ -28,7 +28,7 @@ const survey = [
   {
     type: "list",
     name: "vanitySelectedOp",
-    message: "How do you prefer to generate your hexadecimal suffix?",
+    message: "How do you prefer to generate your hex suffix?",
     choices: [...vanityOpsChoices],
     when: (answer) => answer.action === vanity,
   },
@@ -40,7 +40,7 @@ const survey = [
       answer.action === vanity && answer.vanitySelectedOp === createOwnHex,
     validate: (answer) => {
       if (isNaHex(answer)) {
-        return "Invalid hex format. You can use only A-F, a-f or 0-9";
+        return "Invalid hex format. You can only use A-F, a-f or 0-9";
       }
       return true;
     },
@@ -57,7 +57,7 @@ const survey = [
     type: "number",
     name: "vanityTimeout",
     message:
-      "Selected vanity input could take a while... how many seconds do you want to wait? (default 10 seconds)",
+      "Selected vanity input could take a while... how many seconds do you want to wait? (10 seconds by default)",
     when: (answer) =>
       answer.action === vanity && answer.vanityInput.length >= 3,
   },

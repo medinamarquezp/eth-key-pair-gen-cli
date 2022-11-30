@@ -32,14 +32,14 @@ const printRandomWallet = () => {
 const printVanityWallet = async (data) => {
   const { vanityInput, vanityTimeout } = data;
   const timeout = vanityTimeout ? vanityTimeout * 1000 : 10000;
-  spinner = ora("Generating vanity kay pairs...").start();
+  spinner = ora("Generating vanity key pair...").start();
   const { desiredInputReached, address, privateKey } = await getVanityWallet(
     vanityInput,
     timeout
   );
   spinner.stop();
   if (!desiredInputReached) {
-    ghost("Timeout exceeded, generated a random key pairs");
+    ghost("Timeout exceeded, generated a random key pair");
   }
   jsonString({ address, privateKey });
 };

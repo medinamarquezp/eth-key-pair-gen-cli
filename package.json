@@ -1,7 +1,7 @@
 {
-  "name": "eth-key-pairs-gen-cli",
+  "name": "eth-key-pair-gen-cli",
   "version": "1.0.0",
-  "description": "ETH key pairs gen CLI",
+  "description": "ETH key pair gen CLI",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
