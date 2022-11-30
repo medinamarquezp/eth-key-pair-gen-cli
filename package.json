@@ -1,0 +1,29 @@
+{
+  "name": "eth-key-pairs-gen-cli",
+  "version": "1.0.0",
+  "description": "ETH key pairs gen CLI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ETH",
+    "private",
+    "public",
+    "keypair",
+    "keygen"
+  ],
+  "author": "Pedro Medina Márquez",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ethers": "^5.7.2",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.5",
+    "inquirer-prompt-suggest": "^0.1.0",
+    "keccak": "^3.0.1",
+    "ora": "^5.4.1",
+    "randombytes": "^2.0.6",
+    "secp256k1": "^3.8.0"
+  }
+}
